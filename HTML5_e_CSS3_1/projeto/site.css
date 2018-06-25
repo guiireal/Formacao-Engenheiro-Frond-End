@@ -1,6 +1,7 @@
 body {
     font-family: "Times New Roman", serif;
     background-color: #F2FFFC;
+    line-height: 1.5;
 }
 
 h1, h2 {
@@ -12,6 +13,13 @@ main h1 {
     background-color: rgb(63, 81, 181);
     color: #FAFFFA;
     text-align: center;
+    padding: 20px;
+    border-bottom: 10px solid black;
+}
+
+main div {
+    width: 720px;
+    margin: auto;
 }
 
 h2 {
@@ -23,15 +31,21 @@ p {
 }
 blockquote {
     background-color: #D9E5E3;
+    padding: 16px;
+    border: 10px solid #C2CCCA;
+    margin: 0;
+    width: 250px;
+    box-sizing: border-box;
 }
 
 aside {
     background-color: #3F51B5;
     color: #F2FFFC;
+    text-align: center;
 }
 
 footer {
-    background-color: #000;
+    background-color: #000000;
     color: #F2FFFC;
 }
 
