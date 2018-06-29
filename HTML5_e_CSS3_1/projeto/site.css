@@ -20,6 +20,7 @@ main h1 {
 main div {
     width: 720px;
     margin: auto;
+    padding: 30px 0;
 }
 
 h2 {
@@ -28,12 +29,14 @@ h2 {
 
 p {
     font-family: "Crimson Text", "Times New Roman", serif;
+    margin: 20px 0;
 }
+
 blockquote {
     background-color: #D9E5E3;
     padding: 16px;
     border: 10px solid #C2CCCA;
-    margin: 0;
+    margin: 20px 40px;
     width: 250px;
     box-sizing: border-box;
 }
@@ -42,6 +45,12 @@ aside {
     background-color: #3F51B5;
     color: #F2FFFC;
     text-align: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+aside li {
+    display: inline-block;
 }
 
 footer {
@@ -60,4 +69,12 @@ main a {
 aside a {
     color: inherit;
     font-family: "Open Sans Condensed", sans-serif;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
 }
