@@ -24,14 +24,6 @@ p {
 	margin: 20px 0;
 }
 
-.citacao-bio {
-	background-color: #D9E5E3;
-	border: 10px solid #C2CCCA;
-	width: 250px;
-	box-sizing: border-box;
-	margin: 20px 40px;
-}
-
 .navegacao-site {
 	text-align: center;
 	background-color: #3C1D3D;
@@ -57,7 +49,7 @@ main a {
 	font-family: "Open Sans Condensed", sans-serif;
 }
 
-.citacao-bio, .navegacao-site, .rodape-pagina {
+.navegacao-site, .rodape-pagina {
     padding: 20px;
 }
 
@@ -89,21 +81,6 @@ em {
 	display: inline-block;
 }
 
-.artigo {
-	padding-bottom: 30px;
-	border-bottom: 1px solid #ccc;
-	margin-bottom: 20px;
-}
-
-.leia-mais {
-	padding: 8px;
-	margin: 16px;
-	display: block;
-	font-size: 24px;
-	text-align: center;
-	background-color: #E6E7E8;
-}
-
 nav a {
 	text-transform: lowercase;
 }
@@ -116,23 +93,15 @@ nav a {
 }
 
 .github {
-	background-image: url(github.png);
+	background-image: url(../img/github.png);
 }
 
 .twitter {
-	background-image: url(twitter.png);
+	background-image: url(../img/twitter.png);
 }
 
 .linkedin {
-	background-image: url(linkedin.png);
-}
-
-.fiat {
-	float: right;
-}
-
-.petrobras {
-	float: left;
+	background-image: url(../img/linkedin.png);
 }
 
 main {
@@ -146,11 +115,6 @@ main {
 	box-sizing: border-box;
 	border-left: 10px solid black;
 	border-bottom: 10px solid black;
-}
-
-cite {
-	font-style: italic;
-	float: right;
 }
 
 .minha-foto {
