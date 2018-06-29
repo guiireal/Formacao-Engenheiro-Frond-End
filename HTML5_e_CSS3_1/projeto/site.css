@@ -15,6 +15,7 @@ main h1 {
     text-align: center;
     padding: 20px;
     border-bottom: 10px solid black;
+    text-transform: uppercase;
 }
 
 main div {
@@ -49,7 +50,7 @@ aside {
     margin-bottom: 25px;
 }
 
-aside li {
+.icones-sociais li {
     display: inline-block;
 }
 
@@ -77,4 +78,23 @@ strong {
 
 em {
     font-style: italic;
+}
+
+.icones-sociais a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-indent: -9999px;
+}
+
+.github {
+    background-image: url(github.png);
+}
+
+.twitter {
+    background-image: url(twitter.png);
+}
+
+.linkedin {
+    background-image: url(linkedin.png);
 }
