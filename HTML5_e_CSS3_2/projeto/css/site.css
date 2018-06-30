@@ -34,6 +34,13 @@ main a {
     color: #851944;
 }
 
+main a:hover,
+main a:focus,
+footer a:focus,
+footer a:hover {
+    color: red;
+}
+
 main p {
     text-align: justify;
     margin: 1em 0;
@@ -52,13 +59,17 @@ main p {
     text-transform: lowercase;
 }
 
+.navegacao-site a:hover,
+.navegacao-site a:focus {
+    text-shadow: 0 0 2px pink;
+}
+
 .navegacao-site h1 {
     font-size: 1.5em;
     margin-bottom: 1em;
 }
 
 .rodape-pagina {
-    background-color: rgba(0,0,0,.8);
     color: #F2FFFC;
     padding: 1em;
     clear: both;
@@ -67,6 +78,15 @@ main p {
     left: 0;
     width: 100%;
     box-sizing: border-box;
+    background-repeat: no-repeat;
+    text-shadow: 1px 1px black;
+    background-image: radial-gradient(ellipse at left bottom,
+        rgba(60, 29, 61, 0.8),
+        rgba(60, 29, 61, 0.8) 65%,
+        black 65%,
+        black 70%,
+        transparent 70%);
+    background-size: 25% 100%;
 }
 
 .container {
@@ -108,7 +128,7 @@ em {
 }
 
 main {
-    width: 80%;
+    width: calc(100% - 0.9 * 300px);
     float: left;
     padding-bottom: 4em;
 }
@@ -121,7 +141,7 @@ main {
 }
 
 .navegacao-site {
-    width: 20%;
+    width: calc(0.9 * 300px);
     float: right;
     position: relative;
     top: 300px;
@@ -132,4 +152,33 @@ main {
     top: 0;
     right: 0;
     height: 300px;
+}
+
+.icones-redes-sociais a {
+    position: relative;
+}
+
+.icones-redes-sociais a:hover::after,
+.icones-redes-sociais a:focus::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background: black;
+    color: white;
+    top: 100%;
+    width: 300%;
+    right: 0;
+    text-indent: 0;
+    font-size: .75em;
+}
+
+.icones-redes-sociais a:hover::before,
+.icones-redes-sociais a:focus::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    background-color: black;
+    transform: translateY(.5em) rotate(45deg);
 }

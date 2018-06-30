@@ -7,8 +7,11 @@
     background-color: #E6E7E8;
 }
 
-.post-blog {
-    padding-bottom: 1.5em;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 1em;
+.post-blog + .post-blog {
+    padding-top: 1em;
+    margin-top: 1.5em;
+    background-image: linear-gradient(to right, rgba(200, 200, 200, 0), rgba(200, 200, 200, 1), rgba(200, 200, 200, 0));
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: top center;
 }

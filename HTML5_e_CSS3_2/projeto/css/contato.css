@@ -1,0 +1,82 @@
+legend,
+label[for="mensagem"] {
+    font-weight: bold;
+    margin-top: 1em;
+}
+label[for],
+button {
+    display: block;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    padding: .25em .5em;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+button {
+    border: 0;
+    padding: .5em 1em;
+    font-family: "Open Sans Condensed", sans-serif;
+    background-color: #3C1D3D;
+    color: white;
+    font-size: 1.2em;
+    margin-left: auto;
+    margin-top: 1em;
+}
+input:invalid {
+    box-shadow: 0 0 3px red;
+}
+input:focus,
+textarea:focus {
+    background-color: #FFD;
+}
+button:focus {
+    background-color: #8C1D3D;
+}
+fieldset > fieldset {
+    display: inline;
+}
+label[for="outro"] {
+    display: inline;
+}
+input[name="outro-assunto"] {
+    width: auto;
+}
+input[value="Outro"] ~ input {
+    display: none;
+}
+input[value="Outro"]:checked ~ input {
+    display: inline;
+}
+.com-icone {
+    position: relative;
+    margin-bottom: 0;
+}
+.com-icone::after {
+    content: '';
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    background-color: #8C1D3D;
+    background-size: 50% 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 100%;
+}
+.com-icone + input {
+    width: calc(100% - 2em);
+    position: relative;
+    left: 2em;
+    margin-top: 0;
+}
+.com-icone[for="nome"]::after {
+    background-image: url(../imagens/usuario.png);
+}
+.com-icone[for="email"]::after {
+    background-image: url(../imagens/email.png);
+}
