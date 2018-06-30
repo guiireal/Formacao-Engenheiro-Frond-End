@@ -5,6 +5,8 @@
     margin: 1em 2em;
     width: 30ch;
     box-sizing: border-box;
+    transition: box-shadow 1s, transform 1s;
+    transition-delay: 1s, 0s;
 }
 
 .citacao-bio:nth-of-type(even) {
@@ -20,6 +22,7 @@
 .citacao-bio:hover,
 .citacao-bio:focus {
     box-shadow: 0 0 0 99999px rgba(0,0,0,.8);
+    transition-delay: 0s, 1s;
 }
 
 .citacao-bio:nth-of-type(odd):hover,

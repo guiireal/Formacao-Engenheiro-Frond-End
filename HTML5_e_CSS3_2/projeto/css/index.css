@@ -26,6 +26,15 @@
     -webkit-transform: rotate(-5deg) skew(-10deg);
             transform: rotate(-5deg) skew(-10deg);
     display: inline-block;
+    -webkit-animation: flutua 1s ease-in-out infinite;
+            animation: flutua 1s ease-in-out infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+    position: relative;
+}
+.saudacao:hover em {
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
 }
 .botao-index {
     font-size: 1.25em;
@@ -37,6 +46,14 @@
     margin: 2em auto;
     display: block;
     text-align: center;
+    text-decoration: none;
+    transition: .5s;
+}
+.botao-index:focus,
+.botao-index:hover {
+    background-color: #C54974;
+    color: white;
+    box-shadow: 0 0 1em #FA9;
 }
 .secao-inicio {
     padding: 2em;
@@ -132,6 +149,8 @@ body {
     font-size: 400%;
     color: rgba(255, 127, 127, .5);
     position: absolute;
+    -webkit-animation: aparece 2s;
+            animation: aparece 2s;
 }
 .eficiencia {
     top: 50%;
@@ -236,6 +255,12 @@ body {
 
     font-size: 1.2em;
     font-family: "Open Sans Condensed", sans-serif;
+    -webkit-animation: aparece .5s;
+            animation: aparece .5s;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
 }
 .blog .inicio-post {
     position: absolute;
@@ -256,4 +281,32 @@ body {
 .blog a:focus {
     background-color: #F2FFFC;
     color: #F26;
+}
+@-webkit-keyframes aparece {
+    from {
+        opacity: 0;
+        transform: scale(0.001);
+    }
+}
+@keyframes aparece {
+    from {
+        opacity: 0;
+        transform: scale(0.001);
+    }
+}
+@keyframes flutua {
+    from {
+        top: -5px;
+    }
+    to {
+        top: 5px;
+    }
+}
+@-webkit-keyframes flutua {
+    from {
+        top: -5px;
+    }
+    to {
+        top: 5px;
+    }
 }
