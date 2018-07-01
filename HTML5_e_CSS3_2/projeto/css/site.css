@@ -3,6 +3,8 @@ body {
     background-color: #F2FFFC;
     font-size: 120%;
     line-height: 1.5;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 h1,
@@ -19,7 +21,7 @@ h1 {
 
 .titulo-principal {
     text-align: center;
-    background-color: #851944;
+    background-color: #0D47A1;
     color: #FFF;
     padding: 2rem;
     border-bottom: .5rem solid #000;
@@ -31,14 +33,14 @@ h1 {
 }
 
 main a {
-    color: #851944;
+    color: #0D47A1;
 }
 
 main a:hover,
 main a:focus,
 footer a:focus,
 footer a:hover {
-    color: red;
+    color: blue;
 }
 
 main p {
@@ -48,7 +50,7 @@ main p {
 
 .navegacao-site {
     text-align: center;
-    background-color: #3C1D3D;
+    background-color: #1A237E;
     color: #F2FFFC;
     padding: 1em;
 }
@@ -61,7 +63,7 @@ main p {
 
 .navegacao-site a:hover,
 .navegacao-site a:focus {
-    text-shadow: 0 0 2px pink;
+    text-shadow: 0 0 2px blue;
 }
 
 .navegacao-site h1 {
@@ -81,8 +83,8 @@ main p {
     background-repeat: no-repeat;
     text-shadow: 1px 1px black;
     background-image: radial-gradient(ellipse at left bottom,
-        rgba(60, 29, 61, 0.8),
-        rgba(60, 29, 61, 0.8) 65%,
+        rgba(93, 130, 238, 0.89),
+        rgba(93, 130, 238, 0.89) 65%,
         black 65%,
         black 70%,
         transparent 70%);
@@ -128,26 +130,23 @@ em {
 }
 
 main {
-    width: calc(100% - 0.9 * 300px);
-    float: left;
     padding-bottom: 4em;
+    flex-grow: 1;
 }
 
 .minha-foto,
 .navegacao-site {
     border-left: .5em solid black;
-    border-bottom: .5em solid black;
     box-sizing: border-box;
 }
 
 .navegacao-site {
     width: calc(0.9 * 300px);
-    float: right;
-    position: relative;
-    top: 300px;
+    padding-top: calc(300px + 1em);
 }
 
 .minha-foto {
+    border-bottom: .5em solid black;
     position: absolute;
     top: 0;
     right: 0;

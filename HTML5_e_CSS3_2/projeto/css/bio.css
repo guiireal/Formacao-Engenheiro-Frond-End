@@ -38,7 +38,7 @@
 .container > p::first-letter {
     font-size: 200%;
     font-weight: bold;
-    color: #3C1D3D;
+    color: #1A237E;
     text-shadow: 1px 1px #000;
     margin-right: .2ch;
     line-height: 1;
@@ -64,7 +64,7 @@
 
 .habilidades th {
     font-weight: bold;
-    background-color: #851944;
+    background-color: #1A237E;
     color: white;
 }
 
@@ -78,7 +78,7 @@
 }
 
 .habilidades thead th {
-    background-color: #3C1D3D;
+    background-color: #0D47A1;
 }
 
 .habilidades [colspan] {

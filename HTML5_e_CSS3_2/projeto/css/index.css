@@ -1,3 +1,6 @@
+body {
+    display: block;
+}
 .foto-home {
     height: 200px;
     border-radius: 50%;
@@ -21,7 +24,7 @@
     color: #000;
 }
 .saudacao em {
-    color: #851944;
+    color: #0D47A1;
     font-size: 4em;
     -webkit-transform: rotate(-5deg) skew(-10deg);
             transform: rotate(-5deg) skew(-10deg);
@@ -38,7 +41,7 @@
 }
 .botao-index {
     font-size: 1.25em;
-    background-color: #851944;
+    background-color: #0D47A1;
     color: #FFF;
     padding: .5em;
     border: .2em solid black;
@@ -51,7 +54,7 @@
 }
 .botao-index:focus,
 .botao-index:hover {
-    background-color: #C54974;
+    background-color: #1976D2;
     color: white;
     box-shadow: 0 0 1em #FA9;
 }
@@ -65,7 +68,7 @@
     text-shadow: 2px 2px #000;
 }
 .trabalhos {
-    background-color: #3C1D3D;
+    background-color: #001e2e;
     border-top: .5em solid #000;
     border-bottom: .5em solid #000;
     background-image: linear-gradient(135deg, transparent, transparent 14px, rgba(0,0,0,.1) 14px, rgba(0,0,0,.1) 15px, transparent 15px, transparent);
@@ -76,25 +79,36 @@
     color: #FFF;
 }
 .trabalhos ul {
-    overflow: hidden;
-    border: .5em solid black;
+    display: -webkit-flex;
+    display:         flex;
 }
 .trabalhos li {
-    float: left;
-    width: 33.333%;
+    -webkit-flex: auto;
+            flex: auto;
+    border: .5em solid #000;
+}
+.trabalhos li:first-child {
+    order: 2;
+    transform: scale(1.2);
+}
+.trabalhos li:nth-child(2) {
+    order: 1;
+}
+.trabalhos li:nth-child(3) {
+    order: 3;
 }
 .trabalhos img {
     width: 100%;
     display: block;
 }
 .blog {
-    background-color: #999;
+    background-color: #b0cbd9;
     position: relative;
     background-image: linear-gradient(45deg, transparent, transparent 14px, rgba(255,255,255,.1) 14px, rgba(255,255,255,.1) 15px, transparent 15px, transparent);
     background-size: 20px 20px;
     background-attachment: fixed;
     color: #FFF;
-    border-bottom: .5em solid #851944;
+    border-bottom: .5em solid #0D47A1;
 }
 .blog small {
     position: relative;
@@ -104,7 +118,7 @@
     width: 30%;
 }
 .blog li a {
-    color: #FCF;
+    color: #0D47A1;
     padding: .5em;
     display: block;
 }
@@ -117,7 +131,7 @@ footer h2 {
     font-size: 3em;
 }
 footer a {
-    color: #F99;
+    color: #0D47A1;
 }
 main {
     width: 100%;
@@ -147,7 +161,7 @@ body {
     font-family: "Shadows Into Light", cursive;
     font-weight: bold;
     font-size: 400%;
-    color: rgba(255, 127, 127, .5);
+    color: rgba(164, 179, 219, 0.97);
     position: absolute;
     -webkit-animation: aparece 2s;
             animation: aparece 2s;
@@ -249,7 +263,7 @@ body {
 
     text-align: center;
     text-decoration: none;
-    background-color: #3C1D3D;
+    background-color: #00838F;
     color: white;
     border: .25em solid black;
 
@@ -280,7 +294,7 @@ body {
 .blog a:hover,
 .blog a:focus {
     background-color: #F2FFFC;
-    color: #F26;
+    color: #1A237E;
 }
 @-webkit-keyframes aparece {
     from {
