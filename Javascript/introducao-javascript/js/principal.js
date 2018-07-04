@@ -18,13 +18,13 @@ for (var i = 0; i < pacientes.length; i++) {
     if (peso <= 0 || peso >= 1000) {
         pesoEhValido = false;
         tdImc.textContent = "Peso inválido!";
-        paciente.style.backgroundColor = "lightcoral";
+        paciente.classList.add("paciente-invalido");
     }
 
     if (altura <= 0 || altura >= 3.00){
         alturaEhValida = false;
         tdImc.textContent = "Altura inválida!";
-        paciente.style.backgroundColor = "lightcoral";
+        paciente.classList.add("paciente-invalido");
     }
 
     if (alturaEhValida && pesoEhValido){
