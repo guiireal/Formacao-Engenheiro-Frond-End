@@ -1,7 +1,5 @@
-var titulo = document.querySelector(".titulo");
-titulo.textContent = "Aparecida Nutricionista";
-
 var pacientes = document.querySelectorAll(".paciente");
+var btnAdicionarPaciente = document.querySelector("#adicionar-paciente");
 
 for (var i = 0; i < pacientes.length; i++) {
 
@@ -32,3 +30,8 @@ for (var i = 0; i < pacientes.length; i++) {
         tdImc.textContent = imc.toFixed(2);
     }
 }
+
+btnAdicionarPaciente.addEventListener("click", function(evento){
+    evento.preventDefault();
+    console.log("Clicado !");
+});

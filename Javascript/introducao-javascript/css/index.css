@@ -2,48 +2,49 @@
 	box-sizing: border-box;
  }
 
-body{
+body {
 	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 }
 
-header{
+header {
 	background-color: #333;
 	height: 3em;
 	color: #FFF;
 	margin-bottom: 1em;
 }
 
-header h1{
-	font-size: 2em;
-	display:inline-block;
-	vertical-align:	middle;
-}
-header h2{
+header h1 {
 	font-size: 2em;
 	display:inline-block;
 	vertical-align:	middle;
 }
 
-header .container:before{
+header h2 {
+	font-size: 2em;
+	display:inline-block;
+	vertical-align:	middle;
+}
+
+header .container:before {
 	content: '';
 	display:inline-block;
 	height: 100%;
 	vertical-align:	middle;
 }
 
-.container{
+.container {
 	width: 60%;
 	height: 100%;
 	margin: 0 auto;
 }
 
-section{
+section {
 	margin: 2em 0;
 	overflow: hidden;
 }
 
-section h2{
+section h2 {
 	font-size: 3em;
 	display: block;
 	padding-bottom: .5em;
@@ -51,11 +52,10 @@ section h2{
 	margin-bottom: .5em;
 }
 
-table{
+table {
 	width: 100%;
 	margin-bottom : .5em;
     table-layout: fixed;
-
 }
 
 td, th {
@@ -65,38 +65,43 @@ td, th {
 	text-align: center;
 }
 
-th{
+th {
 	font-weight: bold;
 	background-color: #EEE;
 }
 
-label{
+label {
 	color: #555;
 	display: block;
 	margin-bottom: .2em;
 }
 
-.campo{
+.campo {
 	margin: 0;
 	padding-bottom: 1em;
 	width: 100%;
 	border: 1px solid #ccc;
 	padding: .7em;
-	width: 100%;
 }
 
-.campo-medio{
+.campo-medio {
 	display: inline-block;
 	padding-right: .5em;
 }
 
-.grupo{
+.grupo {
 	width: 32%;
 	display: inline-block;
 	padding: 10px 0px;
 }
 
-button{
+.grupo-nome {
+	width: 100%;
+	display: inline-block;
+	padding: 10px 0px;
+}
+
+button {
 	padding: .5em 2em;
 	border: 0;
 	border-bottom: 3px solid;
@@ -111,10 +116,9 @@ button{
     display: block;
     clear: both;
     margin: 10px 0px;
-
 }
 
-button:active{
+button:active {
 	margin-top:0px;
 	border: 0;
 }
@@ -124,11 +128,11 @@ button[disabled=disabled], button:disabled {
 	border-color: darkgray;
 }
 
-.adicionar-paciente{
+.adicionar-paciente {
     margin-top: 30px;
 }
 
-.campo-invalido{
+.campo-invalido {
 	border: 1px solid red;
 }
 
