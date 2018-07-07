@@ -1,12 +1,30 @@
 .frase {
     font-size: 20px;
+    text-align: left;
 }
 
 .campo-digitacao {
     font-size: 20px;
     height: 150px;
+    border: 3px solid black;
+}
+
+.borda-verde {
+    border: 3px solid green;
+}
+
+.borda-vermelha {
+    border: 3px solid red;
 }
 
 .campo-desativado {
     background-color: lightgray;
+}
+
+.icones {
+    vertical-align: middle;
+}
+
+.invisivel {
+    visibility: hidden;
 }

@@ -4,18 +4,29 @@
     <meta charset="UTF-8">
     <title>Velocidade de Digitação</title>
     <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/libs/google-fonts.css">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
     <div class="container">
         <h1 class="center">Teste de Digitação</h1>
-        <p class="frase center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="frase center">Digite esta frase o mais rápido possível</p>
            <ul class="informacoes center">
-               <li><span id="tamanho-frase"></span> palavras</li>
-               <li><span id="tempo-digitacao">3</span> segundos</li>
+               <li>
+                    <i class="small material-icons icones">description</i>
+                   <span id="tamanho-frase"></span> palavras
+               </li>
+               <li>
+                   <i class="small material-icons icones">query_builder</i>
+                   <span id="tempo-digitacao">10</span> segundos
+               </li>
            </ul>
         <textarea class="campo-digitacao" rows="8" cols="40"></textarea>
-        <button id="botao-reiniciar">Reiniciar Jogo</button>
+        <div class="botoes">
+            <button id="botao-reiniciar" class="btn-floating btn-large waves-effect waves-light red">
+                <i class="material-icons">restore</i>
+            </button>
+        </div>
         <ul class="center">
             <li><span id="contador-caracteres">0</span> caracteres</li>
             <li><span id="contador-palavras">0</span> palavras</li>
