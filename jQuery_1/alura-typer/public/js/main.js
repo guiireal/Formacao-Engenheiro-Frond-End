@@ -2,7 +2,8 @@ var tempoInicial = $("#tempo-digitacao").text();
 var campo = $(".campo-digitacao");
 
 // QUANDO O DOCUMENTO ESTIVER CARREGADO, EXECUTA A FUNÇÃO
-$(document).ready(function() {
+//$(document).ready(function() {});
+$(function() {
     atualizaTamanhoFrase();
     inicializaContadores();
     inicializaCronometro();
@@ -30,12 +31,15 @@ function inicializaCronometro() {
     var tempoRestante = $("#tempo-digitacao").text();
     // ONE PERMITE QUE O EVENTO ACONTEÇA 1 VEZ SOMENTE
     campo.one("focus", function() {
+        $("#botao-reiniciar").attr("disabled",true);
         var cronometro = setInterval(function() {
             tempoRestante--;
             $("#tempo-digitacao").text(tempoRestante);
             if (tempoRestante == 0) {
                 campo.attr("disabled", true);
                 clearInterval(cronometro); // PARA O CRONÔMETRO
+                $("#botao-reiniciar").attr("disabled", false);
+                campo.addClass("campo-desativado");
             }
         }, 1000);
     });
