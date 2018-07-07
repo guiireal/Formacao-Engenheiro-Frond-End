@@ -69,12 +69,14 @@
 					</tr>
 				</tbody>
 			</table>
+			<span id="erro-ajax" class="invisivel">Erro ao buscar os pacientes!</span>
+			 <button id="importar-pacientes" class="botao bto-secundario">Importar Pacientes</button>
 		</section>
 	</main>
 	<br />
 	<section class="container">
     <h2 id="titulo-form">Adicionar novo paciente</h2>
-	<ul id="mensagens-erro"></ul>
+	<ul id="mensagens-erro" class="erro"></ul>
 	    <form id="form-adiciona">
 	        <div class="grupo-nome">
 	            <label for="nome">Nome:</label>
@@ -100,5 +102,6 @@
 	<script type="text/javascript" src="js/form.js"></script>
 	<script type="text/javascript" src="js/remover-paciente.js"></script>
 	<script type="text/javascript" src="js/filtro.js"></script>
+	<script type="text/javascript" src="js/buscar-pacientes.js"></script>
 </body>
 </html>

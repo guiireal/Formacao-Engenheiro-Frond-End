@@ -134,6 +134,10 @@ button[disabled=disabled], button:disabled {
 	border-color: darkgray;
 }
 
+.bto-secundario {
+	width: 24%;
+}
+
 .adicionar-paciente {
     margin-top: 30px;
 }
@@ -146,7 +150,7 @@ button[disabled=disabled], button:disabled {
 	background-color: lightcoral;
 }
 
-#mensagens-erro {
+.erro {
 	color: red;
 }
 

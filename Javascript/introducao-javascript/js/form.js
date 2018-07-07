@@ -8,8 +8,7 @@ btnAdicionarPaciente.addEventListener("click", function(evento){
         exibeMensagensErro(erros);
         return;
     }
-    tBodyPacientes = document.querySelector("#tabela-pacientes");
-    tBodyPacientes.appendChild(criaLinhaTR(paciente));
+    adicionaPacienteNaTabela(paciente);
     form.reset();
     var ulMensagensErro = document.querySelector("#mensagens-erro");
     ulMensagensErro.innerHTML = "";
@@ -42,6 +41,12 @@ function montaTD(dado, classe) {
     td.classList.add(classe);
     td.textContent = dado;
     return td;
+}
+
+function adicionaPacienteNaTabela(paciente) {
+    var pacienteTr = document.createElement("tr");
+    tBodyPacientes = document.querySelector("#tabela-pacientes");
+    tBodyPacientes.appendChild(criaLinhaTR(paciente));
 }
 
 function validaPaciente(paciente) {
