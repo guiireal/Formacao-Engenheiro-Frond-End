@@ -6,7 +6,7 @@ $(document).ready(function() {
     atualizaTamanhoFrase();
     inicializaContadores();
     inicializaCronometro();
-    $("#botao-reiniciar").click(reiniciaJogo());
+    $("#botao-reiniciar").click(reiniciaJogo);
 });
 
 function atualizaTamanhoFrase() {
@@ -47,4 +47,5 @@ function reiniciaJogo() {
     $("#contador-palavras").text("0");
     $("#contador-caracteres").text("0");
     $("#tempo-digitacao").text(tempoInicial);
+    inicializaCronometro();
 }
