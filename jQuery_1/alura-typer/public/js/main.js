@@ -37,13 +37,18 @@ function inicializaCronometro() {
             tempoRestante--;
             $("#tempo-digitacao").text(tempoRestante);
             if (tempoRestante == 0) {
-                campo.attr("disabled", true);
                 clearInterval(cronometro); // PARA O CRONÔMETRO
-                $("#botao-reiniciar").attr("disabled", false);
-                campo.addClass("campo-desativado");
+                finalizaJogo();
             }
         }, 1000);
     });
+}
+
+function finalizaJogo() {
+    campo.attr("disabled", true);
+    $("#botao-reiniciar").attr("disabled", false);
+    campo.addClass("campo-desativado");
+    inserePlacar();
 }
 
 function inicializaMarcadores() {
