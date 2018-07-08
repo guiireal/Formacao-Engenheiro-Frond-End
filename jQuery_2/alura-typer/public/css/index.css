@@ -1,11 +1,11 @@
-.card{
+.card {
 	width: 49%;
 	display: inline-block;
 	vertical-align: top;
 }
 
 
-#botao-jogue{
+#botao-jogue {
 	width: 150px;
 	display: block;
 	margin: 50px auto;

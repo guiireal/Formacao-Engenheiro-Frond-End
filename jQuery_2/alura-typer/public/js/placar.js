@@ -9,14 +9,14 @@ function inserePlacar() {
     var linha = novaLinha(usuario, numPalavras);
     linha.find(".botao-remover").click(removeLinha);
 
-    corpoTabela.append(linha);
+    corpoTabela.prepend(linha);
     $(".placar").slideDown(500);
     scrollPlacar();
 }
 
 function scrollPlacar() {
     var posicaoPlacar = $(".placar").offset().top;
-    $("body").animate(
+    $("body, html").animate(
     {
         scrollTop: posicaoPlacar + "px"
     }, 1000);
@@ -67,7 +67,7 @@ function sincronizaPlacar(){
 
         var score = {
             usuario: usuario,
-            pontos: palavras            
+            pontos: palavras
         };
 
         placar.push(score);
@@ -78,15 +78,14 @@ function sincronizaPlacar(){
 
         $.post("http://localhost:3000/placar", dados , function() {
             console.log("Placar sincronizado com sucesso");
-            $(".tooltip").tooltipster("open"); 
-        }).fail(function(){
-            $(".tooltip").tooltipster("open").tooltipster("content", "Falha ao sincronizar"); 
-        }).always(function(){ //novo
+            $(".tooltip").tooltipster("open");
+        }).fail(function() {
+            $(".tooltip").tooltipster("open").tooltipster("content", "Falha ao sincronizar");
+        }).always(function() {
             setTimeout(function() {
-            $(".tooltip").tooltipster("close"); 
-        }, 1200);
-});
-
+                $(".tooltip").tooltipster("close");
+            }, 1200);
+        });
     });
 }
 

@@ -33,7 +33,7 @@ body {
     overflow: scroll;
 }
 
-#erro{
+#erro {
     color: red;
     display: none;
 }
@@ -42,20 +42,20 @@ body {
     display: none;
 }
 
-#frase-id{
+#frase-id {
     width: 40px;
 }
 
-#botao-sync{
+#botao-sync {
     float: right;
 }
 
-.select-usuarios{
-    display:inline-block;
+.select-usuarios {
+    display: inline-block;
 }
 
-#usuarios{
-    display:block;
+#usuarios {
+    display: block;
 }
 
 .selectize-input {

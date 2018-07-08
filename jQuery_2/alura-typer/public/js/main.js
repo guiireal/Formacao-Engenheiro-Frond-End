@@ -62,6 +62,7 @@ function inicializaMarcadores() {
 
 function inicializaCronometro() {
     campo.one("focus", function() {
+        $("#botao-reiniciar").attr("disabled", true);
         var tempoRestante = $("#tempo-digitacao").text();
     	var cronometroID = setInterval(function() {
     		tempoRestante--;
@@ -76,6 +77,7 @@ function inicializaCronometro() {
 
 function finalizaJogo() {
     campo.attr("disabled", true);
+    $("#botao-reiniciar").attr("disabled", false);
     campo.toggleClass("campo-desativado");
     inserePlacar();
 }
