@@ -2,14 +2,16 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Alura Typer</title>
+    <title>Ninja Typer</title>
     <link rel="stylesheet" href="css/libs/materialize.min.css">
     <link rel="stylesheet" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" href="css/libs/selectize.default.css">
+    <link rel="stylesheet" href="css/libs/tooltipster.bundle.min.css" />
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="center">Alura Typer</h1>
+        <h1 class="center">Ninja Typer</h1>
         <p class="frase center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
         <div class="center">
@@ -43,7 +45,19 @@
             <a id="botao-frase-id" class="btn-floating btn-large waves-effect waves-light cyan">
                 <i class="material-icons">repeat_one</i>
             </a>
-            <input type="number" min="0" max="9" id="frase-id">
+            <input type="number" min="0" id="frase-id">
+
+            <div class="select-usuarios">
+                <select id="usuarios">
+                    <option value="Douglas">Douglas</option>
+                    <option value="Flavio">Flavio</option>
+                    <option value="Nico">Nico</option>
+                </select>
+            </div>
+
+             <a id="botao-sync" class="btn-floating btn-large waves-effect waves-light yellow tooltip" title="Sincronizado com sucesso">
+                <i class="material-icons">swap_vert</i>
+            </a>
         </div>
 
         <ul class="center">
@@ -73,6 +87,9 @@
     <script src="js/main.js"></script>
     <script src="js/placar.js"></script>
     <script src="js/frase.js"></script>
+    <script src="js/selectize.js"></script>
+    <script src="js/tooltipster.bundle.min.js"></script>
+
 
 </body>
 </html>

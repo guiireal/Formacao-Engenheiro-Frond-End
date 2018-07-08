@@ -45,3 +45,20 @@ body {
 #frase-id{
     width: 40px;
 }
+
+#botao-sync{
+    float: right;
+}
+
+.select-usuarios{
+    display:inline-block;
+}
+
+#usuarios{
+    display:block;
+}
+
+.selectize-input {
+    width: 150px;
+    vertical-align: middle;
+}
