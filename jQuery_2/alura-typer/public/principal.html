@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Velocidade de Digitação</title>
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="center">Teste de Digitação</h1>
+        <p class="frase center">Digite esta frase o mais rápido possível</p>
+           <ul class="informacoes center">
+               <li>
+                    <i class="small material-icons icones">description</i>
+                   <span id="tamanho-frase"></span> palavras
+               </li>
+               <li>
+                   <i class="small material-icons icones">query_builder</i>
+                   <span id="tempo-digitacao">10</span> segundos
+               </li>
+           </ul>
+        <textarea class="campo-digitacao" rows="8" cols="40"></textarea>
+        <div class="botoes">
+            <button id="botao-reiniciar" class="btn-floating btn-large waves-effect waves-light red">
+                <i class="material-icons">restore</i>
+            </button>
+        </div>
+        <ul class="center">
+            <li><span id="contador-caracteres">0</span> caracteres</li>
+            <li><span id="contador-palavras">0</span> palavras</li>
+        </ul>
+        <section class="placar">
+            <h3 class="center">Placar</h3>
+            <table class="centered">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>N° de Palavras</th>
+                        <th>Remover</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/placar.js"></script>
+</body>
+</html>
