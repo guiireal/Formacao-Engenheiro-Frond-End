@@ -1,0 +1,44 @@
+.secao {
+    float: left;
+    width: 33.333%;
+}
+
+.mini {
+    float: left;
+    width: 50%;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.logo,
+.secao {
+    padding: 0 1%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.logo,
+.busca,
+.barra-nav,
+.menu-principal {
+    display: inline-block;
+    vertical-align: middle;
+}
+.menu-principal li {
+    float: left;
+}
+
+header {
+    padding: 0.5em 0;
+}
+.destaques {
+    margin-top: 1em;
+}
+.barra-nav {
+    margin: 0.4em 0;
+}
