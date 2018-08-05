@@ -5,9 +5,13 @@ class NegociacaoController {
         this._inputData = $("#data");
         this._inputQuantidade = $("#quantidade");
         this._inputValor = $("#valor");
-        this._listaNegociacoes = new ListaNegociacoes();
         this._negociacoesView = new NegociacoesView($("#negociacoesView"));
         this._negociacoesView.update(this._listaNegociacoes);
+
+        this._listaNegociacoes = new ListaNegociacoes(this, (triggerUpdateView) => {
+            this._negociacoesView.update(triggerUpdateView);
+        });
+
         this._mensagem = new Mensagem();
         this._mensagemView = new MensagemView($("#mensagemView"));
         this._mensagemView.update(this._mensagem);
@@ -38,6 +42,10 @@ class NegociacaoController {
         this._inputQuantidade.value = 1;
         this._inputValor.value = 0.0;
         this._inputData.focus();
+    }
+
+    apaga() {
+        this._listaNegociacoes.esvazia();
     }
 
 }
