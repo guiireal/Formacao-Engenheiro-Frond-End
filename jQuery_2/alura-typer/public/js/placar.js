@@ -59,7 +59,7 @@ function mostraPlacar() {
 function sincronizaPlacar(){
 
     var placar = [];
-    var linhas = $("tbody>tr");
+    var linhas = $("<tbody>tr");
 
     linhas.each(function(){
         var usuario = $(this).find("td:nth-child(1)").text();
