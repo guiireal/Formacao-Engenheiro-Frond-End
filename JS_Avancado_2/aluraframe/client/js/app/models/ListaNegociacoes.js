@@ -1,6 +1,6 @@
 class ListaNegociacoes {
 
-    constructor(contexto, triggerUpdate) {
+    constructor(triggerUpdate) {
         this._listaNegociacoes = [];
         this._triggerUpdate = triggerUpdate;
     }
