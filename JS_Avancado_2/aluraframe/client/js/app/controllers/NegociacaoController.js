@@ -11,24 +11,30 @@ class NegociacaoController {
         this._listaNegociacoes = new Bind(
             new ListaNegociacoes(), 
             new NegociacoesView($('#negociacoesView')), 
-            'adiciona', 'esvazia');
+            'adiciona', 'esvazia' , 'ordena', 'inverteOrdem');
        
         this._mensagem = new Bind(
             new Mensagem(), new MensagemView($('#mensagemView')),
-            'texto');       
+            'texto');    
+            
+        this._ordemAtual = ''               
     }
     
     adiciona(event) {
-        
+       
         event.preventDefault();
-        this._listaNegociacoes.adiciona(this._criaNegociacao());
-        this._mensagem.texto = 'Negociação adicionada com sucesso'; 
-        this._limpaFormulario();   
+        try {
+            this._listaNegociacoes.adiciona(this._criaNegociacao());
+            this._mensagem.texto = 'Negociação adicionada com sucesso'; 
+            this._limpaFormulario();   
+        } catch(erro) {
+            this._mensagem.texto = erro;
+        }
     }
     
     importaNegociacoes() {
         
-        
+
         let service = new NegociacaoService();
         service
             .obterNegociacoes()
@@ -36,7 +42,7 @@ class NegociacaoController {
                 this._listaNegociacoes.adiciona(negociacao);
                 this._mensagem.texto = 'Negociações do período importadas'   
             }))
-            .catch(erro => this._mensagem.texto = erro);               
+            .catch(erro => this._mensagem.texto = erro);                              
     }
     
     apaga() {
@@ -59,5 +65,15 @@ class NegociacaoController {
         this._inputQuantidade.value = 1;
         this._inputValor.value = 0.0;
         this._inputData.focus();   
+    }
+    
+    ordena(coluna) {
+        
+        if(this._ordemAtual == coluna) {
+            this._listaNegociacoes.inverteOrdem(); 
+        } else {
+            this._listaNegociacoes.ordena((p, s) => p[coluna] - s[coluna]);    
+        }
+        this._ordemAtual = coluna;    
     }
 }
